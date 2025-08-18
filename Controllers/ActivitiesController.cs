@@ -40,15 +40,11 @@ namespace DayCareGuarderia.Controllers
             return View(activities);
         }
 
-        // GET: Activities/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Activities/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Activities activities)
@@ -62,7 +58,6 @@ namespace DayCareGuarderia.Controllers
             return View(activities);
         }
 
-        // GET: Activities/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -78,9 +73,6 @@ namespace DayCareGuarderia.Controllers
             return View(activities);
         }
 
-        // POST: Activities/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Activities activities)
@@ -113,7 +105,6 @@ namespace DayCareGuarderia.Controllers
                 return RedirectToAction(nameof(Index));
         }
 
-        // GET: Activities/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -131,7 +122,6 @@ namespace DayCareGuarderia.Controllers
             return View(activities);
         }
 
-        // POST: Activities/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
